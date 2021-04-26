@@ -13,6 +13,7 @@ public class UIMgr : MonoBehaviour
 
     public int air; //how much air the player has
     public int bubbleCount; //max amount of air the player can have
+    public static int fishCount = 0;
 
     public Image[] bubbles; //stores the bubbles in an array
 
