@@ -10,11 +10,11 @@ public class FishBehaviour : MonoBehaviour
     {
         initialPosition = transform.localPosition;
     }
-    public FisherPhysics entity;
+    public FishPhysics entity;
     public Vector3 range = Vector3.zero;
     public bool facingLeft = false;
 
-    public GameObject player;           //so the fish always know where the player is
+    /*public GameObject player;           //so the fish always know where the player is
     public float detectionRange = 4.0F; //how far the fish can detect the player
     // Update is called once per frame
     void Update()
@@ -53,5 +53,5 @@ public class FishBehaviour : MonoBehaviour
         if (entity.position.x > (initialPosition.x + range.x))
             facingLeft = !facingLeft;
 
-    }
+    }*/
 }

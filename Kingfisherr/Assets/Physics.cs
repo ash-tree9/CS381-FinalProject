@@ -7,13 +7,13 @@ public class BasicPhysics : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        entity.position = transform.localPosition;
+    // entity.position = transform.localPosition;
     }
 
-    public FisherPhysics entity;
+  //  public FishPhysics entity;
 
     // Update is called once per frame
-    void Update()
+    /*void Update()
     {
         if (Utils.ApproximatelyEqual(entity.speed, entity.desiredSpeed))
         {
@@ -39,5 +39,5 @@ public class BasicPhysics : MonoBehaviour
 
       
     }
-    public Vector3 eulerRotation = Vector3.zero;
+    public Vector3 eulerRotation = Vector3.zero;*/
 }
