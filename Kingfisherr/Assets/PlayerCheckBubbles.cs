@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerCheckBubbles : MonoBehaviour
 {
     public bool isUnderwater = false; //check if player is underwater
+    public GameObject player;
 
     public int bubbleLoss = 1; //one bubble lost each tick
     public float timeEachTick = 10f; //each bubble is 10 seconds, can change
