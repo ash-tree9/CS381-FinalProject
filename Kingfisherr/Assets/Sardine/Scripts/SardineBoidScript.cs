@@ -1,13 +1,13 @@
-﻿/*
+﻿
 using UnityEngine;
 using System.Collections;
-/*
+
 public class SardineBoidScript : MonoBehaviour {
 	public Transform maneru;
 	public float speed=1.5f;
 	public GameObject[] eyes;
 	Rigidbody iwasirigid;
-	public SardineBoidsController sardineBoidsController;
+	//public SardineBoidsController sardineBoidsController;
 	public float maneruSpeed=1f;
 	
 	void Start () {
@@ -39,4 +39,5 @@ public class SardineBoidScript : MonoBehaviour {
 		}
 	}
 }
-*/
+
+//testing something

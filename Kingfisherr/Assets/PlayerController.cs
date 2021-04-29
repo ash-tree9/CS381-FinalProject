@@ -27,12 +27,12 @@ public class PlayerController : MonoBehaviour
         direction.x = hInput * speed;
         direction.y = vInput * speed;
         // the below code causes the 
-        if (Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
         {
             rotationOfPlayer.y = 270;
             playerModel.transform.localEulerAngles = rotationOfPlayer;
         }
-        if (Input.GetKeyDown(KeyCode.D))
+        if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
         {
             rotationOfPlayer.y = 90;
             playerModel.transform.localEulerAngles = rotationOfPlayer;
