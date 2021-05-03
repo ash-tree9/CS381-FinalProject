@@ -6,7 +6,7 @@ public class FishPhysics : MonoBehaviour
 {
     public GameObject PlayerPos;
     Rigidbody rb;
-    public float speed = 0.1f;
+    public float speed = 0.3f;
 
 
     private void Awake()
