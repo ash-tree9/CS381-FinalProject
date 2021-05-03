@@ -4,12 +4,17 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    //TEMPORARY, just to get the player moving
-    //probably should replace with the movement learned in class
+    
 
-    public CharacterController controller;
+    //public CharacterController controller;
     private Vector3 direction;
+    Rigidbody rb;
     public float speed = 8;
+
+    private void Awake()
+    {
+        rb = transform.GetComponent<Rigidbody>();
+    }
 
     public Vector3 rotationOfPlayer = Vector3.zero;
     public GameObject playerModel; // this gets the player model for making character look left and right on a/d keypress
@@ -20,12 +25,12 @@ public class PlayerController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        float hInput = Input.GetAxis("Horizontal");
+        /*float hInput = Input.GetAxis("Horizontal");
         float vInput = Input.GetAxis("Vertical");
         direction.x = hInput * speed;
-        direction.y = vInput * speed;
+        direction.y = vInput * speed;*/
         // the below code causes the 
         if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
         {
@@ -40,6 +45,15 @@ public class PlayerController : MonoBehaviour
 
         direction.z = 0;
 
-        controller.Move(direction * Time.deltaTime);
+        if (Input.GetKey(KeyCode.A))
+            rb.AddForce(Vector3.left * speed);
+        if (Input.GetKey(KeyCode.D))
+            rb.AddForce(Vector3.right * speed);
+        if (Input.GetKey(KeyCode.W))
+            rb.AddForce(Vector3.up * speed);
+        if (Input.GetKey(KeyCode.S))
+            rb.AddForce(Vector3.down * speed);
+
+        
     }
 }
