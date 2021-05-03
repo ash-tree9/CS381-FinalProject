@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Water
   - Air
+  - fish
   layers:
   - Default
   - TransparentFX

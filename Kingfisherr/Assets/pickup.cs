@@ -6,7 +6,9 @@ public class pickup : MonoBehaviour
 {
     void OnTriggerEnter(Collider other)
     {
-        pickupFish.scoreValue += 1;
-        Destroy(other.gameObject);
+        if (other.gameObject.tag == "fish") {
+            pickupFish.scoreValue += 1;
+            Destroy(other.gameObject);
+        }
     }
 }

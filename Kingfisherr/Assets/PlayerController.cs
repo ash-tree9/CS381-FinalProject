@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     //public CharacterController controller;
     private Vector3 direction;
     Rigidbody rb;
-    public float speed = 8;
+    public float speed = 1;
 
     private void Awake()
     {
