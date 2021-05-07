@@ -24,6 +24,10 @@ public class MoveLevels : MonoBehaviour
         {
             winScreen.SetActive(true);
         }
+        else if (other.gameObject.transform.tag == "Level")
+        {
+            SceneManager.LoadScene("LevelTwoScene");
+        }
     }
 
     public void MainMenu()

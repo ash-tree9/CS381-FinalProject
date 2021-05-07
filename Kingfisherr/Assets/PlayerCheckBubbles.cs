@@ -12,6 +12,10 @@ public class PlayerCheckBubbles : MonoBehaviour
 
     Coroutine losingAir;
 
+    //used for respawning
+    [SerializeField] private Transform playerRespawn;
+    [SerializeField] private Transform respawnPoint;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +34,7 @@ public class PlayerCheckBubbles : MonoBehaviour
                     StopCoroutine(losingAir);
                 //here will be respawning code
                 //set isUnderwater to false, air to max after respawn
+                playerRespawn.transform.position = respawnPoint.transform.position;
                 isUnderwater = false;
             }
         }
@@ -53,6 +58,7 @@ public class PlayerCheckBubbles : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+
         if (other.gameObject.transform.tag == "Water")
         {
             Debug.Log("underwater!");
@@ -61,14 +67,12 @@ public class PlayerCheckBubbles : MonoBehaviour
         }
     }
 
-    //testing
-    //only firing once??? why
     private void OnTriggerStay(Collider other)
     {
-        Debug.Log("still underwater");
+        //here could be dash code? dashing only avaliable underwater?
+        //if we have time
     }
 
-    //not working and i could not tell you why
     private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.transform.tag == "Water")

@@ -31,7 +31,7 @@ public class UIMgr : MonoBehaviour
     void Update()
     {
         /* TEST THIS WHEN PICK UP FISH WORKS */
-        /*if (bubbleCount < 10) //if max bubbles have not been hit
+        if (bubbleCount < 10) //if max bubbles have not been hit
         {
             switch (pickupFish.inst.bubbleScoreValue) //there has to be a better way
             {
@@ -59,7 +59,7 @@ public class UIMgr : MonoBehaviour
                 default:
                     break;
             }
-        }*/
+        }
 
         if (air > bubbleCount) //make sure amount of air doesn't exceed amount of bubbles
             air = bubbleCount;
