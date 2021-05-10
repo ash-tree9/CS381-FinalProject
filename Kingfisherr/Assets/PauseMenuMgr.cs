@@ -33,6 +33,10 @@ public class PauseMenuMgr : MonoBehaviour
 
     public void MainMenu()
     {
+        pauseMenu.SetActive(false);
+        Time.timeScale = 1f;
+        gamePaused = false;
+        pickupFish.scoreValue = 0;
         SceneManager.LoadScene("MainMenu");
     }
 

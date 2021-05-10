@@ -33,18 +33,18 @@ public class UIMgr : MonoBehaviour
         /* TEST THIS WHEN PICK UP FISH WORKS */
         if (bubbleCount < 10) //if max bubbles have not been hit
         {
-            switch (pickupFish.inst.bubbleScoreValue) //there has to be a better way
+            switch (pickupFish.scoreValue) //there has to be a better way
             {
-                case 5:
+                case 2:
                     bubbleCount = 4;
                     break;
-                case 10:
+                case 4:
                     bubbleCount = 5;
                     break;
-                case 15:
+                case 8:
                     bubbleCount = 6;
                     break;
-                case 20:
+                case 16:
                     bubbleCount = 7;
                     break;
                 case 25:
