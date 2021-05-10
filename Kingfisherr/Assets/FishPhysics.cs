@@ -27,6 +27,7 @@ public class FishPhysics : MonoBehaviour
     {
         Vector3 force = transform.position - PlayerPos.transform.position;
         //   rb.AddForce(force.normalized * speed, ForceMode.Impulse);
+        force.z = 0;
         rb.velocity = force.normalized * speed;
 
        

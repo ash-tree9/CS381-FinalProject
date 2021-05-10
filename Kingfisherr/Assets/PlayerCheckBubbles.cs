@@ -59,7 +59,7 @@ public class PlayerCheckBubbles : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
 
-        if (other.gameObject.transform.tag == "Water")
+        if (other.gameObject.transform.tag == "Water" && !isUnderwater)
         {
             Debug.Log("underwater!");
             isUnderwater = true;
@@ -75,7 +75,7 @@ public class PlayerCheckBubbles : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.transform.tag == "Water")
+        if (other.gameObject.transform.tag == "Water" && isUnderwater)
         {
             Debug.Log("no longer underwater...");
             isUnderwater = false;
